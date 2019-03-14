@@ -1,0 +1,157 @@
+<html>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Escape_Phase4</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<!-- the <body> section is for all the content that is actually displayed on the page -->
+	<body>
+		<div class="column-div darkgray center-content"> 
+			<div class="button center-content">
+			<!--Here I set the onclick attribute of the button image to call the javascript function "checkIamge(this)" When the javascript function is called a series of things will happen, if the images are in the 
+				correct order then a rocket launching sound will play, a message will pop up in the console, and the background of the slots div will turn to green. Also the "invisible" class will be removed and the
+				rocket will appear. If they have the image order incorrect then the background
+				color of the divs with the the correct images within them will turn green, while the background color of the others div will turn red-->
+				<img src="image/button.png" class=" restrict-img-size grow" onclick="checkImage(this)"/>
+				<img src="image/rockettwo.png" class="restrict-img-size grow invisible" id="dorito" onclick="nextweb(this)"/>
+				<img src="image/hint.PNG" class="restrict-img-size grow" onclick="Arrow(this)" id="upanddown"/>
+			</div>
+		</div>
+		
+		<div class="middle-div">
+			<div class="row purple center-content">
+				<p>Find the Asteroids that Stand Out</p>
+			</div>
+			<div class="row grey">
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size grow" onclick="firstRow(this)" id="one_picture"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+			</div>
+			<div class="row purple">
+				<div class="mini blue center-content">
+					<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size grow" onclick="secondRow(this)" id="second_picture"/>
+				</div>
+			</div>
+			<div class="row grey">
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size grow" onclick="thirdRow(this)" id="third_picture"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+			</div>
+			<div class="row purple">
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size grow" onclick="fourthRow(this)" id="fourth_picture"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+			</div>
+			<div class="row grey">
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+				<div class="mini black center-content">
+				<img src="image/asteroid.png" class="restrict-img-size grow" onclick="fifthRow(this)" id="fifth_picture"/>
+				</div>
+				<div class="mini blue center-content">
+				<img src="image/asteroid.png" class="restrict-img-size"/>
+				</div>
+			</div>
+			<div class="row purple">
+				<div class="mid-mini purple center-content" id="slot1">
+				<img src="image/rocket.png" class="restrict-img-size" onclick="firstImage(this)" id="image1"/>
+				</div>
+				<div class="mid-mini lightblue center-content" id="slot2">
+				<img src="image/spaceship.png" class="restrict-img-size" onclick="secondImage(this)" id="image2"/>
+				</div>
+				<div class="mid-mini purple center-content" id="slot3">
+				<img src="image/alien.png" class="restrict-img-size" onclick="thirdImage(this)" id="image3"/>
+				</div>
+				<div class="mid-mini lightblue center-content" id="slot4">
+				<img src="image/planet.PNG" class="restrict-img-size" onclick="fourthImage(this)" id="image4"/>
+				</div>
+				<div class="mid-mini purple center-content" id="slot5">
+				<img src="image/astronaut.png" class="restrict-img-size" onclick="fifthImage(this)" id="image5"/>
+				</div>
+			</div>
+		</div>
+		<div class="column-div darkgray">
+			<div class="stars-background center-content">
+			<img src="image/whitestars.PNG" class="restrict-img-size"/>
+			</div>
+			<div class="stars-background center-content">
+			<img src="image/whitestars.PNG" class="restrict-img-size"/>
+			</div>
+		</div>
+		<audio src="sounds/launch.mp3" type="audio/mp3" id="launch"></audio>
+		
+		<script src="script.js"></script>
+	</body>
+
+</html>

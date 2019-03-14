@@ -1,0 +1,107 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	margin: 0;
+}
+
+/* When writing CSS classes it is VERY important that you use hyphen delimited strings (square-div and NOT squareDiv) */
+/* Addtionally, you should know what the class does just by looking at the name (the name should be DESCRIPTIVE) */
+/* When thinking about sizing elements on your page, there are many different units you can use = https://www.w3schools.com/cssref/css_units.asp */
+.column-div {
+	display: block;
+	height: 100%;
+	width: 10%;
+}
+p {
+	font-family: Courier New;
+	font-size: 65px;
+	text-align: center;
+	color: white;
+}
+
+.middle-div {
+	display: block;
+	height: 100%;
+	width: 80%;
+}
+.darkgray {
+		background-color: #454D67;
+}
+
+.row {
+	display: flex;
+	height: calc(100%/7);
+	width: 100%;
+	text-align: center;
+}
+
+.purple{
+	background-color: #5F72B7;
+}
+
+.mini {
+	display: flex;
+	height: 100%;
+	width: calc(100%/6);
+}
+.blue {
+	background-color: #0F1C4D;
+}
+.black {
+	background-color: #000000;
+}
+.grey {
+		background-color: #CABEBE;
+}
+/*This is the background color, green, is used to replace the background color of the slots when the correct images are placed inside of them, as a sign to inform the user that the image he/she placed for that individual slot is correct*/
+.green {
+	background-color: #008000;
+}
+/*This is the background color, red, is used to replace the background color of the slots when the incorrect images are placed inside of them, as a sign to inform the user that the image he/she placed for that individual slot is incorrect*/
+.red {
+	background-color: #FF0000;
+}
+.mid-mini {
+	display: flex;
+	height: 100%;
+	width: 20%;
+}
+.stars-background  {
+	height: 50%;
+	width: 100%;
+}
+.lightblue {
+	background-color: #263857;
+}
+.center-content {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+/* This class is used on most of my images to restrict the size so it stays completely within it's parent div */
+
+.restrict-img-size {
+	max-height: 100%;
+	max-width: 100%;
+}
+/* This class allows my images to zoom when the mouse hovers over them*/
+.grow {
+	transition: all .1s ease-in-out;
+}
+.grow:hover{
+	transform: scale(1.3);
+}
+/* This is the div that holds the image of the checking button that can be clicked to check the order of the images*/
+.button {
+	display: block;
+	width: 100%;
+	height: 50%;
+}
+
+/* This class allows an image to be hidden until I click the the onclick attribute of the button image to call the JS function checkIamge and it I had all my images in the correct ordered then this class will be remove to expose a rocket*/
+.invisible {
+	display: none;
+	visibility: hidden;
+}
